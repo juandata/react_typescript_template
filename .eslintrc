@@ -1,0 +1,27 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+      "ecmaVersion": 2021,
+      "sourceType": "module", 
+      "ecmaFeatures": {
+        "jsx": true
+      }
+  },
+  "extends": [
+      "plugin:@typescript-eslint/recommended",
+      "prettier",           
+      "plugin:prettier/recommended"
+  ],
+  "rules": {
+    // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
+    // e.g. "@typescript-eslint/explicit-function-return-type": "off",
+  "prettier/prettier": 0,
+  "no-loss-of-precision": "off",
+  "@typescript-eslint/no-loss-of-precision": ["error"]
+},
+"settings": {
+  "react" : {
+    "version": "detect" 
+  }
+}
+}
