@@ -1,8 +1,9 @@
-// configures the "preview" iframe that renders the storybook components.
-import { configure } from '@storybook/react';
-import requireContext from 'require-context.macro';
-const req = requireContext('../src', true, /\.stories\.tsx$/);
-function loadStories() {
-  req.keys().forEach(req);
-}
-configure(loadStories, module);
+export const parameters = {
+  actions: { argTypesRegex: "^on[A-Z].*" },
+  controls: {
+    matchers: {
+      color: /(background|color)$/i,
+      date: /Date$/,
+    },
+  },
+};
